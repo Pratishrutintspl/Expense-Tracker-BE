@@ -1,0 +1,6 @@
+Date: 03/11/2025, Time: 17:01
+Error: Cannot destructure property 'email' of 'body' as it is undefined.
+Stack Trace: TypeError: Cannot destructure property 'email' of 'body' as it is undefined.
+    at Object.loginUser (D:\expense-tracker-api\expense-tracker-api\services\userService.js:41:13)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:27:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

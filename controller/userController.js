@@ -39,5 +39,6 @@ const loginUser = async (req, res) => {
 
 
 module.exports = {
-    registerUser
+    registerUser,
+    loginUser
 }
