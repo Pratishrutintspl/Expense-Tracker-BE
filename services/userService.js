@@ -1,32 +1,71 @@
 const User = require("../models/User")
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
+const { token } = require("morgan")
 
 
 const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET), { expiresIn: "1d" }
 }
 
-const registerUser = async ({ name, email, password }) => {
-    const existingUser = await User.findOne({ email });
+const registerUser = async (body, ip) => {
+    const { name, email, password } = body;
+
+    const existingUser = await User.findOne({ email })
     if (existingUser) {
         return { isexistingUser: true };
     }
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password,salt);
+    const salt = await bcrypt.genSalt(10)
 
+    const hashedPassword = await bcrypt.hash(password, salt)
     const user = await User.create({
         name,
         email,
-        password:hashedPassword
-    });
+        password: hashedPassword,
+    })
     return {
-        _id:user._id,
-        name:user.name,
-        email:user.email,
-        token:generateToken(user._id),
-        isexistingUser:false,
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        token: generateToken(user._id),
+        ip,
+        isexistingUser: false,
     }
 }
 
-module.exports={registerUser }
+
+
+
+const loginUser = async (body, ip) => {
+
+    const { email, password } = body;
+
+    const user = await User.findOne({ email });
+
+    if (!user) {
+        return { usernotfound: true }
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+        return { passwordNotmatch: true }
+    }
+
+    return {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        token: generateToken(user._id),
+        ip
+    }
+
+}
+
+const getProfile = async (userId, ip) => {
+    const user = await User.findById(userId).select("-password");
+    if (!user)
+        return { notRegisterUser: true }
+}
+
+module.exports = { registerUser, loginUser, getProfile }
