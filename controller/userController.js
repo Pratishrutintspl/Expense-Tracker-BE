@@ -28,7 +28,7 @@ const loginUser = async (req, res) => {
         if (!result) {
             return Responses.failResponse(req, res, messages.invalidCredentials, 409)
         }
-         return Responses.successResponse(req, res, result, messages.loginSuccess, 200);
+        return Responses.successResponse(req, res, result, messages.loginSuccess, 200);
     } catch (error) {
         console.error("REGISTER ERROR:", error);
         errorLog(error);
@@ -36,9 +36,28 @@ const loginUser = async (req, res) => {
     }
 }
 
+const getProfile = async (req, res) => {
+    try {
+
+        const ip = req.headers.ip ? req.headers.ip : await commonHelper.getIp(req);
+        const result = await userService.getProfile(req.userId, ip)
+
+        if (!result) {
+            return Responses.failResponse(req, res, null, messages.userNotFound, 404);
+
+        }
+        return Responses.successResponse(req, res, result, messages.profileFetched, 200);
+    }
+    catch (error) {
+        console.error("Profile Error", error)
+        errorLog(error)
+        return Responses.errorResponse(req, res, error)
+    }
+}
 
 
 module.exports = {
     registerUser,
-    loginUser
+    loginUser,
+    getProfile
 }
