@@ -9,6 +9,13 @@ const createError = "Unable to create record";
 const createdSuccess = "Record created successfully";
 const   noToken= "Authorization token missing";
  const invalidToken= "Invalid or expired token";
+ const expenseadded = "Expense added Sucessfully"
+ const expenseFetched ="Expense fetched Sucessfully"
+const updateSuccess ="Expense Update Sucessfully"
+const notFound ="Not Found";
+const expenseDeleted= "Expense deleted successfully";
+const expenseNotFound= "Expense not found";
+
 module.exports = {
     registerSuccess,
     loginSuccess,
@@ -19,5 +26,11 @@ module.exports = {
     createError,
     createdSuccess,
     noToken,
-    invalidToken
+    invalidToken,
+    expenseadded,
+    expenseFetched,
+    notFound,
+    updateSuccess,
+    expenseDeleted,
+    expenseNotFound
 }

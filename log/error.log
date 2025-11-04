@@ -4,3 +4,43 @@ Stack Trace: TypeError: Cannot destructure property 'email' of 'body' as it is u
     at Object.loginUser (D:\expense-tracker-api\expense-tracker-api\services\userService.js:41:13)
     at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:27:42)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 04/11/2025, Time: 16:02
+Error: Invalid status code: 2000. Status code must be greater than 99 and less than 1000.
+Stack Trace: RangeError: Invalid status code: 2000. Status code must be greater than 99 and less than 1000.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:69:11)
+    at Object.successResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:3:14)
+    at addExpense (D:\expense-tracker-api\expense-tracker-api\controller\expenseController.js:13:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 04/11/2025, Time: 16:13
+Error: The comparison function must be either a function or undefined: #<Object>
+Stack Trace: TypeError: The comparison function must be either a function or undefined: #<Object>
+    at Array.toSorted (<anonymous>)
+    at Object.getExpenses (D:\expense-tracker-api\expense-tracker-api\services\expenseService.js:17:53)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getAllExpense (D:\expense-tracker-api\expense-tracker-api\controller\expenseController.js:32:26)
+Date: 04/11/2025, Time: 16:14
+Error: The comparison function must be either a function or undefined: #<Object>
+Stack Trace: TypeError: The comparison function must be either a function or undefined: #<Object>
+    at Array.toSorted (<anonymous>)
+    at Object.getExpenses (D:\expense-tracker-api\expense-tracker-api\services\expenseService.js:18:53)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getAllExpense (D:\expense-tracker-api\expense-tracker-api\controller\expenseController.js:32:26)
+Date: 04/11/2025, Time: 16:16
+Error: sort() options argument must be an object or nullish
+Stack Trace: Error: sort() options argument must be an object or nullish
+    at Query.sort (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\query.js:3065:11)
+    at Object.getExpenses (D:\expense-tracker-api\expense-tracker-api\services\expenseService.js:22:57)
+    at getAllExpense (D:\expense-tracker-api\expense-tracker-api\controller\expenseController.js:32:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 04/11/2025, Time: 16:37
+Error: id is not defined
+Stack Trace: ReferenceError: id is not defined
+    at Object.getExpenseById (D:\expense-tracker-api\expense-tracker-api\services\expenseService.js:27:49)
+    at getExpenseById (D:\expense-tracker-api\expense-tracker-api\controller\expenseController.js:51:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 04/11/2025, Time: 16:55
+Error: isDeleted is not defined
+Stack Trace: ReferenceError: isDeleted is not defined
+    at Object.addExpense (D:\expense-tracker-api\expense-tracker-api\services\expenseService.js:12:17)
+    at addExpense (D:\expense-tracker-api\expense-tracker-api\controller\expenseController.js:11:46)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
