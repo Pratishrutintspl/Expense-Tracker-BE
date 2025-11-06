@@ -44,3 +44,19 @@ Stack Trace: ReferenceError: isDeleted is not defined
     at Object.addExpense (D:\expense-tracker-api\expense-tracker-api\services\expenseService.js:12:17)
     at addExpense (D:\expense-tracker-api\expense-tracker-api\controller\expenseController.js:11:46)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 05/11/2025, Time: 17:57
+Error: body is not defined
+Stack Trace: ReferenceError: body is not defined
+    at Object.addCategory (D:\expense-tracker-api\expense-tracker-api\services\categoryService.js:4:22)
+    at addCategory (D:\expense-tracker-api\expense-tracker-api\controller\categoryController.js:11:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 15:19
+Error: categoryService.addCategory is not a function
+Stack Trace: TypeError: categoryService.addCategory is not a function
+    at addCategory (D:\expense-tracker-api\expense-tracker-api\controller\categoryController.js:10:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 15:20
+Error: categoryService.addCategory is not a function
+Stack Trace: TypeError: categoryService.addCategory is not a function
+    at addCategory (D:\expense-tracker-api\expense-tracker-api\controller\categoryController.js:10:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
