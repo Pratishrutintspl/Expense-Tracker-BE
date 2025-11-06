@@ -15,11 +15,18 @@ const expenseSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    category:{
-        type:String,
-        enum:["Food","Travel","Bills","Shopping","Health","Other"]
+    // category:{
+    //     type:String,
+    //     enum:["Food","Travel","Bills","Shopping","Health","Other"]
+    // },
+        categoryId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Category",
+      required: true,
     },
+
     date:{
+
         type:Date,
         default:Date.now,
     },

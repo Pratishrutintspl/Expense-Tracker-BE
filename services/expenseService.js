@@ -1,15 +1,15 @@
 const Expense = require("../models/Expense")
 
 const addExpense = async (userId, data, ip) => {
-    const { title, amount, category, date, description , isDeleted} = data;
+    const { title, amount,  date, description , isDeleted,categoryId} = data;
     const expense = await Expense.create({
         userId,
         title,
         amount,
-        category,
+        categoryId,
         date,
         description,
-                isDeleted,
+        isDeleted,
         ip,
 
     });
@@ -20,35 +20,38 @@ const addExpense = async (userId, data, ip) => {
 const getExpenses = async (userId, ip) => {
     console.log("Fetching expenses for user:", userId, "from IP:", ip);
 
-    // Just find by user, not by IP
-    const expenses = await Expense.find({ userId: userId }).sort({ createdAt: -1 });
+     const expenses = await Expense.find({ userId, isDeleted: false })
+    .populate("categoryId", "name") // 🔹 show category details
+    .sort({ createdAt: -1 });
+
     return expenses;
 };
 
-const getExpenseById = async(userId,ip)=>{
- const expenseData = await Expense.findOne({ userId:userId})
- return expenseData;
-}
 
-const updateExpense = async(userId,id,body,ip)=>{
-    return await Expense.findByIdAndUpdate(
-        {_id:id,userId:userId},
-        {$set:body},
-        {new:true},
-        ip
-    )
-}
+const getExpenseById = async (userId, ip) => {
+  const expenseData = await Expense.findOne({  userId, isDeleted: false })
+    .populate("categoryId", "name");
+
+  return expenseData;
+};
+
+const updateExpense = async (userId, id, body, ip) => {
+  return await Expense.findOneAndUpdate(
+    { _id: id, userId, isDeleted: false },
+    { $set: body },
+    { new: true }
+  ).populate("categoryId", "name");
+};
 
 const deleteExpense = async (userId, id, ip) => {
   const deletedExpense = await Expense.findOneAndUpdate(
-    { _id: id, },
-    { $set: { isDeleted: true, deletedIp: ip } }, // 👈 soft delete + store IP (optional)
-    { new: true } // return the updated document
+    { _id: id, userId },
+    { $set: { isDeleted: true, deletedIp: ip } },
+    { new: true }
   );
 
   return deletedExpense;
 };
-
 
 
 module.exports = {
