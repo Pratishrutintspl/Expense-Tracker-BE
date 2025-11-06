@@ -2,38 +2,34 @@
 const mongoose = require("mongoose")
 
 const expenseSchema = new mongoose.Schema({
-    userId:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"User",
-        required:true
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     },
-    title:{
-        type:String,
-        required:true
+    title: {
+        type: String,
+        required: true
     },
-    amount:{
-        type:Number,
-        required:true
+    amount: {
+        type: Number,
+        required: true
     },
-    // category:{
-    //     type:String,
-    //     enum:["Food","Travel","Bills","Shopping","Health","Other"]
-    // },
-        categoryId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
-      required: true,
+    categoryId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Category",
+        required: true,
     },
 
-    date:{
+    date: {
 
-        type:Date,
-        default:Date.now,
+        type: Date,
+        default: Date.now,
     },
-    description:{
-        type:String
+    description: {
+        type: String
     },
-  isDeleted: { type: Boolean, default: false },
-},{timestamps:true})
+    isDeleted: { type: Boolean, default: false },
+}, { timestamps: true })
 
-module.exports = mongoose.model("Expense",expenseSchema)
+module.exports = mongoose.model("Expense", expenseSchema)

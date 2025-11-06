@@ -123,3 +123,99 @@ Stack Trace: CastError: Cast to ObjectId failed for value "192.168.1.187" (type 
     at model.Query.exec (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\query.js:4627:80)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async Object.getExpenseById (D:\expense-tracker-api\expense-tracker-api\services\expenseService.js:32:23)
+Date: 06/11/2025, Time: 16:13
+Error: budget.Save is not a function
+Stack Trace: TypeError: budget.Save is not a function
+    at Object.createBudget (D:\expense-tracker-api\expense-tracker-api\services\BudgetService.js:5:25)
+    at createBudget (D:\expense-tracker-api\expense-tracker-api\controller\budgetController.js:11:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:15
+Error: budget.Save is not a function
+Stack Trace: TypeError: budget.Save is not a function
+    at Object.createBudget (D:\expense-tracker-api\expense-tracker-api\services\BudgetService.js:5:25)
+    at createBudget (D:\expense-tracker-api\expense-tracker-api\controller\budgetController.js:11:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:15
+Error: Budget validation failed: period: Cast to string failed for value "[ 'monthly' ]" (type Array) at path "period", month: Cast to Number failed for value "2025-11" (type string) at path "month", category: Path `category` is required.
+Stack Trace: ValidationError: Budget validation failed: period: Cast to string failed for value "[ 'monthly' ]" (type Array) at path "period", month: Cast to Number failed for value "2025-11" (type string) at path "month", category: Path `category` is required.
+    at Document.invalidate (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\document.js:3362:32)
+    at applyDefaults (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\helpers\document\applyDefaults.js:107:17)
+    at model.Document (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\document.js:168:7)
+    at model.Model (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\model.js:127:12)
+    at new model (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\model.js:4845:15)
+    at Object.createBudget (D:\expense-tracker-api\expense-tracker-api\services\BudgetService.js:4:20)
+    at createBudget (D:\expense-tracker-api\expense-tracker-api\controller\budgetController.js:11:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:15
+Error: Budget validation failed: period: Cast to string failed for value "[ 'monthly' ]" (type Array) at path "period", month: Cast to Number failed for value "monthly" (type string) at path "month", category: Path `category` is required.
+Stack Trace: ValidationError: Budget validation failed: period: Cast to string failed for value "[ 'monthly' ]" (type Array) at path "period", month: Cast to Number failed for value "monthly" (type string) at path "month", category: Path `category` is required.
+    at Document.invalidate (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\document.js:3362:32)
+    at applyDefaults (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\helpers\document\applyDefaults.js:107:17)
+    at model.Document (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\document.js:168:7)
+    at model.Model (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\model.js:127:12)
+    at new model (D:\expense-tracker-api\expense-tracker-api\node_modules\mongoose\lib\model.js:4845:15)
+    at Object.createBudget (D:\expense-tracker-api\expense-tracker-api\services\BudgetService.js:4:20)
+    at createBudget (D:\expense-tracker-api\expense-tracker-api\controller\budgetController.js:11:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:45
+Error: Cannot read properties of undefined (reading 'id')
+Stack Trace: TypeError: Cannot read properties of undefined (reading 'id')
+    at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:10:60)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at verifyToken (D:\expense-tracker-api\expense-tracker-api\middlewares\authMiddleware.js:15:5)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:117:3)
+    at handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:295:15
+Date: 06/11/2025, Time: 16:45
+Error: Cannot read properties of undefined (reading 'id')
+Stack Trace: TypeError: Cannot read properties of undefined (reading 'id')
+    at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:10:60)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at verifyToken (D:\expense-tracker-api\expense-tracker-api\middlewares\authMiddleware.js:15:5)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:117:3)
+    at handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:295:15
+Date: 06/11/2025, Time: 16:46
+Error: res.status is not a function
+Stack Trace: TypeError: res.status is not a function
+    at Object.successResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:3:14)
+    at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:11:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:47
+Error: res.status is not a function
+Stack Trace: TypeError: res.status is not a function
+    at Object.successResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:3:14)
+    at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:11:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:47
+Error: res.status is not a function
+Stack Trace: TypeError: res.status is not a function
+    at Object.successResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:3:14)
+    at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:11:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:51
+Error: res.status is not a function
+Stack Trace: TypeError: res.status is not a function
+    at Object.successResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:3:14)
+    at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:11:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:51
+Error: res.status is not a function
+Stack Trace: TypeError: res.status is not a function
+    at Object.successResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:3:14)
+    at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:11:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 06/11/2025, Time: 16:52
+Error: res.status is not a function
+Stack Trace: TypeError: res.status is not a function
+    at Object.successResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:3:14)
+    at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:11:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
