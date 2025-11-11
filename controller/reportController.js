@@ -2,13 +2,14 @@
 const reportService = require("../services/reportService");
 const Responses = require("../helpers/response");
 const { errorLog } = require("../middlewares/errorLog");
+const messages = require("../constants/constantMessages")
 exports.getSummary = async (req, res) => {
   try {
         //  console.log(req)
     const { month, year } = req.query;
      console.log(month,year)
     const result = await reportService.getSummary(req.userId, month, year);
-    return Responses.successResponse(req,res, "Summary fetched successfully", result,200);
+    return Responses.successResponse(req,res, result,messages.getSummary,200);
   } catch (error) {
     console.error("ADD EXPENSE ERROR:", error);
         errorLog(error);
@@ -31,7 +32,7 @@ exports.getTrends = async (req, res) => {
   try {
     const { year } = req.query;
     const result = await reportService.getExpenseTrends(req.userId, year);
-    return Responses.successResponse(req,res, "Expense trends fetched successfully", result,200);
+    return Responses.successResponse(req,res,result, "Expense trends fetched successfully" ,200);
   } catch (error) {
     return Responses.errorResponse(res, res,error);
   }

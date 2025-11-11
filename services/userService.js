@@ -3,8 +3,20 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const CryptoJS = require("crypto-js");
 
-const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
+// const generateToken = (id) => {
+//   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
+// };
+const generateToken = (user) => {
+  console.log(user)
+  return jwt.sign(
+    {
+      id: user._id,
+      name: user.name,
+      email: user.email,
+    },
+    process.env.JWT_SECRET,
+    { expiresIn: "1d" }
+  );
 };
 
 const registerUser = async (body, ip) => {
@@ -28,7 +40,7 @@ const registerUser = async (body, ip) => {
     _id: user._id,
     name: user.name,
     email: user.email,
-    token: generateToken(user._id),
+    token: generateToken(user),
     ip,
     isexistingUser: false,
   };
@@ -103,7 +115,7 @@ const loginUser = async (body, ip) => {
     _id: user._id,
     name: user.name,
     email: user.email,
-    token: generateToken(user._id),
+    token: generateToken(user),
     ip,
   };
 };

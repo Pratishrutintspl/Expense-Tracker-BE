@@ -33,8 +33,9 @@ const getAllExpense = async (req, res) => {
         return Responses.successResponse(
             req,
             res,
+             expenses,
             message.expenseFetched,
-            expenses,
+           
             200
         );
     } catch (error) {

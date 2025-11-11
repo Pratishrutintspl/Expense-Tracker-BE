@@ -14,29 +14,42 @@ const getMonthFilter = (month, year) => {
 const getSummary = async (userId, month, year) => {
   console.log("Fetching Summary for:", { userId, month, year });
 
-  // date filter for given month
+  // Date filter for expenses
   const dateFilter = getMonthFilter(month, year);
 
   // Match conditions for expense aggregation
-  const match = {
+  const expenseMatch = {
     userId: new mongoose.Types.ObjectId(userId),
     isDeleted: false,
     date: dateFilter,
   };
 
-  console.log("Expense Match Filter:", match);
+  console.log("Expense Match Filter:", expenseMatch);
 
-  // 🧾 Total Expenses for month
+  // Total Expenses for month
   const totalExpenseAgg = await Expense.aggregate([
-    { $match: match },
+    { $match: expenseMatch },
     { $group: { _id: null, total: { $sum: "$amount" } } },
   ]);
 
   console.log("Total Expense Aggregate:", totalExpenseAgg);
 
-  // 💰 Total Budgets for user
+  // Match conditions for budgets
+  // Include both monthly and yearly budgets
+const budgetMatch = {
+  user: new mongoose.Types.ObjectId(userId),
+  isDeleted: false,
+  $or: [
+    { period: "monthly", month: Number(month), year: Number(year) },
+    { period: "yearly", year: Number(year) }
+  ]
+};
+
+  console.log("Budget Match Filter:", budgetMatch);
+
+  // Total Budgets for the month/year
   const totalBudgetAgg = await Budget.aggregate([
-    { $match: { user: new mongoose.Types.ObjectId(userId) } },
+    { $match: budgetMatch },
     { $group: { _id: null, total: { $sum: "$amount" } } },
   ]);
 
@@ -51,6 +64,7 @@ const getSummary = async (userId, month, year) => {
     balance: totalBudget - totalExpense,
   };
 };
+
 
 // Expense by category
 const getExpenseByCategory = async (userId, month, year) => {

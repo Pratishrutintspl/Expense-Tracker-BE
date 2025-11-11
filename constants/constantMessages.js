@@ -18,6 +18,7 @@ const expenseNotFound= "Expense not found";
 const CategoryExist ="Category Alerady Exist"
 const budgetCreated = "Budget Created"
 const budgetFetch ="Budhet Fetched Sucessfully"
+const getSummary="Summary fetched successfully";
 module.exports = {
     registerSuccess,
     loginSuccess,
@@ -37,5 +38,6 @@ module.exports = {
     expenseNotFound,
     CategoryExist,
     budgetCreated,
-    budgetFetch
+    budgetFetch,
+    getSummary
 }
