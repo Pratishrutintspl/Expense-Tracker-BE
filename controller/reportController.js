@@ -19,8 +19,9 @@ exports.getSummary = async (req, res) => {
 exports.getByCategory = async (req, res) => {
   try {
     const { month, year } = req.query;
-    const result = await reportService.getExpenseByCategory(req.user.id, Number(month), Number(year));
-    return Responses.successResponse(res, "Category report fetched successfully", result);
+         console.log(month,year)
+    const result = await reportService.getExpenseByCategory(req.userId, month, year);
+    return Responses.successResponse(req,res ,"Category report fetched successfully", result,200);
   } catch (error) {
     return Responses.errorResponse(res, res,error);
   }
@@ -29,8 +30,8 @@ exports.getByCategory = async (req, res) => {
 exports.getTrends = async (req, res) => {
   try {
     const { year } = req.query;
-    const result = await reportService.getExpenseTrends(req.user.id, Number(year));
-    return Responses.successResponse(res, "Expense trends fetched successfully", result);
+    const result = await reportService.getExpenseTrends(req.userId, year);
+    return Responses.successResponse(req,res, "Expense trends fetched successfully", result,200);
   } catch (error) {
     return Responses.errorResponse(res, res,error);
   }
@@ -39,8 +40,8 @@ exports.getTrends = async (req, res) => {
 exports.getBudgetStatus = async (req, res) => {
   try {
     const { month, year } = req.query;
-    const result = await reportService.getBudgetStatus(req.user.id, Number(month), Number(year));
-    return Responses.successResponse(res, "Budget status fetched successfully", result);
+    const result = await reportService.getBudgetStatus(req.userId, month, year);
+    return Responses.successResponse(req,res, "Budget status fetched successfully", result,200);
   } catch (error) {
     return Responses.errorResponse(res, res,error);
   }

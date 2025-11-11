@@ -219,3 +219,156 @@ Stack Trace: TypeError: res.status is not a function
     at Object.successResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:3:14)
     at exports.getSummary (D:\expense-tracker-api\expense-tracker-api\controller\reportController.js:11:22)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Date: 11/11/2025, Time: 12:31
+Error: Illegal arguments: undefined, string
+Stack Trace: Error: Illegal arguments: undefined, string
+    at _async (D:\expense-tracker-api\expense-tracker-api\node_modules\bcryptjs\umd\index.js:305:15)
+    at D:\expense-tracker-api\expense-tracker-api\node_modules\bcryptjs\umd\index.js:335:11
+    at new Promise (<anonymous>)
+    at Object.compare (D:\expense-tracker-api\expense-tracker-api\node_modules\bcryptjs\umd\index.js:334:16)
+    at Object.loginUser (D:\expense-tracker-api\expense-tracker-api\services\userService.js:42:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:27:24)
+Date: 11/11/2025, Time: 12:43
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:50:24)
+Date: 11/11/2025, Time: 12:52
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 12:52
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 12:53
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 12:55
+Error: getIp is not defined
+Stack Trace: ReferenceError: getIp is not defined
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:86:50)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:117:3)
+    at handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:295:15
+    at processParams (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:582:12)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:291:5)
+    at Function.handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:186:3)
+Date: 11/11/2025, Time: 12:56
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:96:24)
+Date: 11/11/2025, Time: 12:56
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 12:57
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 12:58
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 12:58
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 12:59
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 12:59
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 13:00
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:73:24)
+Date: 11/11/2025, Time: 13:00
+Error: Invalid status code: undefined. Status code must be an integer.
+Stack Trace: TypeError: Invalid status code: undefined. Status code must be an integer.
+    at ServerResponse.status (D:\expense-tracker-api\expense-tracker-api\node_modules\express\lib\response.js:65:11)
+    at Object.failResponse (D:\expense-tracker-api\expense-tracker-api\helpers\response.js:12:14)
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:69:24)
+Date: 11/11/2025, Time: 13:07
+Error: getIp is not defined
+Stack Trace: ReferenceError: getIp is not defined
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:63:50)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:117:3)
+    at handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:295:15
+    at processParams (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:582:12)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:291:5)
+    at Function.handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:186:3)
+Date: 11/11/2025, Time: 13:07
+Error: getIp is not defined
+Stack Trace: ReferenceError: getIp is not defined
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:63:50)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:117:3)
+    at handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:295:15
+    at processParams (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:582:12)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:291:5)
+    at Function.handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:186:3)
+Date: 11/11/2025, Time: 13:07
+Error: getIp is not defined
+Stack Trace: ReferenceError: getIp is not defined
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:63:50)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:117:3)
+    at handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:295:15
+    at processParams (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:582:12)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:291:5)
+    at Function.handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:186:3)
+Date: 11/11/2025, Time: 13:08
+Error: getIp is not defined
+Stack Trace: ReferenceError: getIp is not defined
+    at loginUser (D:\expense-tracker-api\expense-tracker-api\controller\userController.js:63:50)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\route.js:117:3)
+    at handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\expense-tracker-api\expense-tracker-api\node_modules\router\lib\layer.js:152:17)
+    at D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:295:15
+    at processParams (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:582:12)
+    at next (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:291:5)
+    at Function.handle (D:\expense-tracker-api\expense-tracker-api\node_modules\router\index.js:186:3)
